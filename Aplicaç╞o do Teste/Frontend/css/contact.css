@@ -1,0 +1,136 @@
+.contact-items {
+  color: white;
+  display: flex;
+}
+
+.contact-items .left {
+  flex: 1;
+  margin-right: 2.5vh;
+}
+
+.contact-items .right {
+  flex: 1;
+  margin-left: 2.5vh;
+}
+
+.contact-items .block {
+  background-color: white;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1.4vh 2.8vh rgba(0, 0, 0, 0.25), 0 1vh 1vh rgba(0, 0, 0, 0.22);
+}
+
+.contact-items .block ul {
+  padding: 0 5vw 0 5vh;
+  height: auto;
+}
+
+.contact-items .block li {
+  margin: 1vh 0;
+}
+
+.contact-items .block h5 {
+  min-width: fit-content;
+  font-size: small;
+  color: black;
+  margin: 0 2vh 0 0;
+}
+
+.contact-items .block span {
+  min-width: fit-content;
+  font-size: smaller;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 2vw;
+}
+
+form input,
+form textarea {
+  border: 0;
+  margin: 1vh 0;
+  padding: 2vh;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 2vh;
+  resize: none;
+}
+
+#form-button {
+  width: 50%;
+  background-color: #00bfcc;
+  font-size: 100%;
+  color: white;
+}
+
+#form-button:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+iframe {
+  width: 100%;
+  flex-grow: 1;
+}
+
+@media (max-width: 110vh) {
+  .contact-items {
+    flex-direction: column;
+  }
+
+  .contact-items .block {
+    margin: 0 0 2vh 0;
+    padding: 2vh;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto 0 auto;
+  }
+
+  #form-button {
+    width: 100%;
+    margin: 0 auto 0 auto;
+  }
+
+  .grouplist {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+  }
+
+  iframe {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    flex-grow: 1;
+    min-height: 30vh;
+  }
+
+  .contact .grouplist {
+    text-align: left;
+  }
+
+  .contact .grouplist h5 {
+    margin: 0;
+  }
+
+  .contact .grouplist .badge {
+    margin: 0;
+  }
+
+  .contact .grouplist li {
+    flex-direction: column;
+    width: 100%;
+    margin: 2vh 0 2vh 0;
+  }
+
+  form input,
+  form textarea {
+    font-size: 2vh;
+  }
+}

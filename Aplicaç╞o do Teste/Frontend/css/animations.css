@@ -1,0 +1,76 @@
+@keyframes fromRight {
+    from {
+    transform: translateX(100%);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromAbove {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromBelow {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*
+header {
+    animation: fromAbove 1s forwards;
+    opacity: 0;
+}
+*/
+
+.act-1 {
+    animation: fromBelow 1s forwards;
+    opacity: 0;
+}
+
+.fromBelow {
+    animation: fromBelow 1s forwards;
+    opacity: 0;
+}
+
+.fromAbove {
+    animation: fromAbove 1s forwards;
+    opacity: 0;
+}
+
+.fromLeft {
+    animation: fromLeft 1s forwards;
+    opacity: 0;
+}
+
+.fromRight {
+    animation: fromRight 1s forwards;
+    opacity: 0;
+}
+

@@ -1,0 +1,108 @@
+.skills {
+  color: white;
+  display: flex;
+}
+
+.skills li {
+  margin: 2vh 0;
+  padding: 1vh;
+}
+
+.bar {
+  background-color: #353b48;
+  display: block;
+  height: 2vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.3);
+  border-radius: 1vh;
+  overflow: hidden;
+  box-shadow: 0 0.1 0.3vh rgba(0, 0, 0, 0.12), 0 0.1vh 0.2vh rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 0.1);
+}
+
+.bar:hover {
+  box-shadow: 0 1.4vw 2.8vh rgba(0, 0, 0, 0.25), 0 1vh 1vh rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+  height: 2vh;
+  float: left;
+  background: linear-gradient(
+    135deg,
+    #ABCBCF 0%,
+    #00BFCC 100%
+  );
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+.html {
+  width: 70%;
+  animation: html 3s;
+}
+
+.css {
+  width: 60%;
+  animation: html 3s;
+}
+
+.js {
+  width: 70%;
+  animation: html 3s;
+}
+
+.java {
+  width: 80%;
+  animation: html 3s;
+}
+
+.aws {
+  width: 60%;
+  animation: html 3s;
+}
+
+.data-an {
+  width: 70%;
+  animation: html 3s;
+}
+
+
+@media (max-width: 110vh) {
+    
+  .skills {
+    flex-direction: column;
+    margin: 0 0 3vh 0;
+  }
+
+  .skills-bars {
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-bars h3{
+    margin: 0;
+    font-size: 2.5vh;
+  }
+
+  .skills-bars li{
+    margin: 0;
+  }
+
+  .skills-bars ul{
+    margin: 0;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .bar {
+    margin-bottom: 2vh;
+  }
+
+}

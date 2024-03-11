@@ -1,0 +1,52 @@
+.english {
+    width: 100%;
+    animation: html 3s;
+  }
+  
+  .spanish {
+    width: 50%;
+    animation: html 3s;
+  }
+  
+  .italian {
+    width: 70%;
+    animation: html 3s;
+  }
+
+  #cae {
+    color: #FEBD40;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .languages p{
+    margin-top: 1vh;
+    color: black;
+  }
+
+  @media (max-width: 110vh) {
+    
+  .languages h3{
+    margin: 0;
+    font-size: 5vw;
+  }
+
+  .languages p{
+    margin-bottom: 2vh;
+    font-size: 2.9vw;
+  }
+
+  .languages .title-lang{
+    margin-bottom: 1vh;
+  }
+
+  .languages li{
+    margin: 0;
+    padding: 0;
+  }
+
+  .languages ul{
+    margin: 0;
+  }
+
+  }

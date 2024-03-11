@@ -1,0 +1,57 @@
+.interests .text-section {
+  text-align: justify;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.icon {
+  padding: 2%;
+  height: 3.5vw;
+  margin: 0 1vh 0 1vh;
+  border: 0.2vh solid rgba(0, 0, 0, 0.1);
+}
+
+.icon img {
+  border: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  position: relative;
+}
+
+a[data]:hover:after {
+  content: attr(data);
+  padding: 0.4vh 0.4vw;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 2;
+  border-radius: 0.5vh;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+}
+
+@media (max-width: 110vh) {
+  .interests h2 {
+    font-size: 2.4vh;
+    width: 100%;
+  }
+
+  section.interests {
+    width: 90%;
+    margin: 5%;
+  }
+
+  .icon {
+    height: 6vw;
+  }
+}

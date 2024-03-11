@@ -1,0 +1,31 @@
+
+.project .main {
+  background-color: white;
+  max-width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: fit-content;
+  padding: 5vh 0 5vh 0;
+}
+
+.project .main iframe {
+  aspect-ratio: 16/9;
+  margin: 0 3vw;
+}
+
+.project .under-text p {
+  margin: 2vh 7vh 2vh 7vh;
+  color: white;
+}
+
+@media (max-width: 110vh) {
+  .project .under-text {
+    width: 100%;
+  }
+
+  .project .under-text p {
+    font-size: 3vw;
+    margin: 2vh;
+  }
+}

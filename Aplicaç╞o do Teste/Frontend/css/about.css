@@ -1,0 +1,165 @@
+.about {
+  background-color: white;
+}
+
+.about hr {
+  border-color: black;
+  background-color: black;
+}
+
+.about img {
+  width: 50%;
+  margin: 0 3vw 0 0;
+}
+
+.about-text {
+  width: 50%;
+  height: 90%;
+}
+
+.under-text {
+  background-color: #3D4451;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main {
+  max-width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3vh 6vw 3vh 6vw;
+}
+
+.image-small {
+  width: 5%;
+}
+
+.title-lang {
+  display: flex;
+  align-items: center;
+}
+
+.title-lang h3 {
+  padding-left: 2vh;
+}
+
+.about-text h2 {
+  font-size: 5vh;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.thin {
+  color: black;
+  font-size: 6vh;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 100;
+}
+
+.about-text h5 {
+  letter-spacing: 0.3vh;
+  font-size: 2.6vh;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.about-text p {
+  color: black;
+  letter-spacing: 0.2vh;
+  line-height: 2vh;
+  font-size: 2vh;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a:hover {
+  text-decoration: none;
+  color: #00BFCC;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.list-group li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8vh 0 0.8vh;
+  font-size: 13px;
+}
+
+.list-group h5 {
+  font-size: 13px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.about .badge {
+  color: black;
+  text-align: right;
+}
+
+@media (max-width: 110vh) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 90%;
+  }
+
+  .about .list-group {
+    width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 6.7vw;
+  }
+
+  .about-text h5 {
+    font-size: 3vw;
+  }
+
+  .about-text li {
+    font-size: 1.5vh;
+  }
+
+  .about-text .badge {
+    font-size: 3vw;
+  }
+
+  main.row {
+    grid-template-columns: 1fr;
+  }
+
+  .about .row .col:nth-child(2) {
+    margin-top: 30%;
+  }
+
+  .under-text li {
+    margin: 0 4vw 0 4vw;
+  }
+
+  .under-text i {
+    height: 5vw;
+  }
+
+}

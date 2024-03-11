@@ -1,0 +1,229 @@
+.card {
+    position: relative;
+    height: 37vh;
+    width: 100%;
+    margin: 0 auto 3vh auto;
+    background-color: white;
+    border-radius: 2.5vh;
+    box-shadow: 1vh 0 5vh rgba(0, 0, 0, 0.5);
+}
+
+.card .inner_part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6vh;
+    height: 35vh;
+    position: absolute;
+}
+
+#slideImg:checked ~ .inner_part {
+    padding: 0;
+    transition: .1s ease-in;
+}
+
+.inner_part .img {
+    height: 27vh;
+    width: 27vh;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 2vh;
+    box-shadow: 0 1vh 5vh rgba(0, 0, 0, 0.2);
+}
+
+#slideImg:checked ~ .inner_part .img {
+    height: 35vh;
+    width: 85vh;
+    z-index: 99;
+    transition: .3s .2s ease-in;
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transition: .6s;
+}
+
+#slide_1:checked ~ .inner_part .img_1 ,
+#slide_2:checked ~ .inner_part .img_2 ,
+#slide_3:checked ~ .inner_part .img_3,
+#slide_4:checked ~ .inner_part .img_4 {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.content {
+    padding: 0 2vh 0 3.5vh;
+    width: 100%;
+    margin-left: 5vh;
+    opacity: 0;
+    transition: .6s;
+}
+
+#slideImg:checked ~ .inner_part .content {
+    display: none;
+}
+
+#slide_1:checked ~ .inner_part .content_1,
+#slide_2:checked ~ .inner_part .content_2,
+#slide_3:checked ~ .inner_part .content_3,
+#slide_4:checked ~ .inner_part .content_4 {
+    opacity: 1;
+    margin-left: 0;
+    z-index: 100;
+    transition-delay: .3s;
+}
+
+.content .title-certificate {
+    font-size: 3vh;
+    font-weight: 700;
+    color: #0d0925;
+    text-align: left;
+}
+
+.content .text {
+    font-size: 2vh;
+    color: #4e4a67;
+    margin: 0 auto 3vh auto;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.content button{
+    padding: 1.5vh 2vh;
+    border: none;
+    font-size: 1.6vh;
+    color: #fff0e6;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    border-radius: 5vh;
+    cursor: pointer;
+    outline: none;
+    background-color: #00BFCC;
+    float: left;
+}
+
+.content button:hover {
+    background: #cecece;
+    color: #00BFCC;
+}
+
+.content button a {
+    color: white;
+}
+
+.slider {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#slideImg:checked ~ .slider {
+    display: none;
+}
+
+.slider .slide {
+    position: relative;
+    height: 1vh;
+    width: 5vh;
+    background: #d9d9d9;
+    border-radius: 0.5vh;
+    display: inline-flex;
+    margin: 0 0.3vh;
+    cursor: pointer;
+}
+
+.slider .slide::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: -100%;
+    background: #00BFCC;
+    border-radius: 1vh;
+    transform: scaleX(0);
+    transition: transform .6s;
+    transform-origin: left;
+}
+
+#slide_1:checked ~ .slider .slide_1:before,
+#slide_2:checked ~ .slider .slide_2:before,
+#slide_3:checked ~ .slider .slide_3:before,
+#slide_4:checked ~ .slider .slide_4:before {
+    transform: scaleX(1);
+    width: 100%;
+}
+
+.certificates input {
+    display: none;
+}
+
+
+
+@media (max-width: 110vh) {
+    
+    .content .text {
+        font-size: 2vw;
+    }
+
+    .certificates .card{
+        width: 100%;
+    }
+    
+    .certificates .img {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .certificates .content {
+        width: fit-content;
+    }
+
+    .card .inner_part {
+        padding-left: 2vh;
+    }
+}
+
+@media (max-width: 73vh) {
+    
+    .content .text {
+        font-size: 3vw;
+    }
+    
+    .card {
+        height: 100vw;
+    }
+
+    .card .inner_part {
+        flex-direction: column;
+        margin: 3vh auto 0 auto;
+        height: auto;
+        padding: 0;
+    }
+
+    .certificates .content {
+        width: 90%;
+        margin-top: 2vh;
+        padding: 0;
+    }
+
+    .content button {
+        width: 65%;
+        margin: 0 17.5%;
+    }
+
+    .certificates .text {
+        margin: 1vh 0;
+        text-align: justify;
+    }
+
+    .slider {
+        width: 55%;
+        align-items: center;
+    }
+}
