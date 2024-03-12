@@ -1,7 +1,6 @@
 function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
-    let icon = document.querySelector('.icon');
-    console.log('Haha');
+    let icon = document.querySelector('.iconImg');
 
     if (menuMobile.classList.contains('open')) {
         menuMobile.classList.remove('open');
