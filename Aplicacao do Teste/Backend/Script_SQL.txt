@@ -4,16 +4,6 @@ create database banco_do_brasil;
 -- Utilizando o Banco de Dados criado
 use banco_do_brasil;
 
-create table Funcionarios (
-	CPF BIGINT primary key,
-    Nome varchar(100),
-    RG varchar(10),
-    Salario FLOAT,
-    CEP BIGINT,
-    Senha varchar(50),
-    Nivel INT
-);
-
 
 -- Criando a tabela de Unidades do Banco
 create table Unidade (
