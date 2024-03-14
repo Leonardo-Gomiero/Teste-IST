@@ -1,0 +1,37 @@
+-- Criando o Banco de Dados
+create database banco_do_brasil;
+
+-- Utilizando o Banco de Dados criado
+use banco_do_brasil;
+
+create table Funcionarios (
+	CPF BIGINT primary key,
+    Nome varchar(100),
+    RG varchar(10),
+    Salario FLOAT,
+    CEP BIGINT,
+    Senha varchar(50),
+    Nivel INT
+);
+
+
+-- Criando a tabela de Unidades do Banco
+create table Unidade (
+	cnpj bigint primary key,
+    nome varchar(100),
+    senha varchar(100),
+    colaborador boolean
+);
+
+
+-- Criando a tabela de Clientes do Banco
+create table Cliente (
+	id int AUTO_INCREMENT primary key,
+    nome varchar(100),
+    saldo float,
+    conta_bancaria bigint,
+    cnpj_unidade bigint,
+    senha varchar(100),
+    colaborador boolean,
+    FOREIGN KEY (cnpj_unidade) REFERENCES Unidade(cnpj)
+);
